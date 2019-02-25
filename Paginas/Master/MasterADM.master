@@ -1,0 +1,208 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterADM.master.cs" Inherits="Paginas_Master_MasterADM" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+
+    <!-- bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../../themes/css/bootstrappage.css" rel="stylesheet" />
+    <link href="../../bootstrap/css/StyleMeuMenu.css" rel="stylesheet" />
+    <%--<link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />--%>
+
+    <!-- Styles globals -->
+    <link href="../../themes/css/flexslider.css" rel="stylesheet" />
+    <link href="../../themes/css/main.css" rel="stylesheet" />
+
+    <!-- scripts -->
+    <script src="../../themes/js/jquery-1.7.2.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../themes/js/superfish.js"></script>
+    <script src="../../themes/js/jquery.scrolltotop.js"></script>
+    <script src="../../themes/js/jquery.mask.min.js"></script>
+    <%--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>--%>
+    <script src="../../bootstrap/js/sweetalert.min.js"></script>
+
+
+
+    <%--  [if lt IE 9]>			
+			            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			            <script src="js/respond.min.js"></script>
+		            <![endif]--%>
+    <%--########################################################################################--%>
+    <%--SOCIAL--%>
+    <link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="themes/css/Icones.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+
+    <link href="../../themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="../../themes/css/Icones.css" rel="stylesheet" />
+    <link href="../../themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+    <%--########################################################################################--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .iconemenu, .tamanhoiconsocial {
+            font-size: 30px !important;
+        }
+
+        .botaoAdm {
+            margin-bottom: 15px !important;
+        }
+
+            .botaoAdm:hover {
+                color: #b04f91;
+                -webkit-transition: all 0.2s linear;
+                -moz-transition: all 0.2s linear;
+                -o-transition: all 0.2s linear;
+                -ms-transition: all 0.2s linear;
+                transition: all 0.3s linear;
+                //box-shadow: 0px 0px 5px #ccc;
+            }
+
+        ul {
+            margin-top: 0px;
+            padding: 0px 0px 0px 30px;
+        }
+
+            ul li {
+                padding-bottom: 1px !important;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="top-bar" class="container">
+            <div class="row ">
+                <!-- LOGO -->
+                <div class="span3">
+                    <div class="span3">
+                        <a href="/Paginas/ADM/ModerarProdutos.aspx" class="logo pull-left ">
+                            <img src="../../themes/images/Logo/paint-iloveimg-resized.png" class="site_logo" alt="" /></a>
+                    </div>
+                </div>
+                <!-- BARRA PESQUISA -->
+                <div class="span5">
+                    <br />
+                    <asp:TextBox ID="txtBuscar" class="form-control procurar" autocomplete="on" placeholder="pesquisar por usuário ou produto" runat="server">
+                    </asp:TextBox>
+                </div>
+                <div class="span4">
+                    <br />
+                    <ul class="user-menu meumenu">
+                        <asp:Label ID="lblMensagens" runat="server"></asp:Label>
+                        <li><a class="meumenu">
+                            <%--<img src="../../themes/images/FOTO PERFIL/este.gif" class="user meumenu" />--%>
+                            <%-- <asp:Image ID="fotoPerfil" runat="server" CssClass="user meumenu" />--%>
+                            <asp:Label ID="lblFoto" runat="server"></asp:Label>
+                        </a>
+                            <ul id="lista-">
+                                <li><a>
+                                    <asp:Label ID="lblNomeAdm" runat="server"></asp:Label></a></li>
+                                <li><a href="/Paginas/Alterar/AlterarCadastro.aspx#" class="sep">Cadastro</a></li>
+                            </ul>
+
+                        </li>
+                        <asp:Button ID="btnSair" runat="server" Text="Sair" CausesValidation="false" CssClass="i2Style i2Style:active" OnClick="btnSair_Click2" />
+                        <%--   <li><a href="#"><i class="fa fa-user-circle-o" style="font-size: 24px"></i></a></li>--%>
+                        <%--<li><a href="#">Cadastrar</a></li>--%>
+                    </ul>
+
+                </div>
+            </div>
+            <%--******************************************************--%>
+            <hr />
+            <div class="row">
+                <div class="span2 text-center">
+                    <%--<img src='../../themes/images/FOTO PERFIL/este.gif' class="fotoPerfilGrande " />--%>
+                    <asp:Image ID="fotoPerfilGrande" CssClass="fotoPerfilGrande" runat="server" />
+                </div>
+                <div class="span3 pull-left">
+                    <h4>
+                        <asp:Label ID="lblNome" runat="server" Text="Nome ADM"></asp:Label>
+                    </h4>
+                    <p>
+                        Denúncias verificadas:
+                        <asp:Label ID="lblDenuncias" runat="server" Text=""></asp:Label>
+                    </p>
+                    <p>
+                        Marcas moderadas:
+                        <asp:Label ID="lblMarcas" runat="server" Text=""></asp:Label>
+                    </p>
+                </div>
+                <div class="span2">
+                    <a href="#" style="text-decoration: underline">mapa do site</a><br />
+                    <a href="#" style="text-decoration: underline">Visitar home</a>
+                </div>
+                <div class="span2">
+                    <a href="#" style="text-decoration: underline">Alterar termos de uso</a><br />
+                    <a href="#" style="text-decoration: underline">Enviar e-mail</a>
+                </div>
+                <style>
+                    .colorSocial {
+                        color: #333;
+                    }
+
+                    .tamanhoiconsocial {
+                        padding: 2px 10px 0px 2px;
+                    }
+
+                    .fotoPerfilGrande {
+                        display: inline-block;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 100% !important;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                        display: inline-block;
+                    }
+
+                    .botaoAdm:hover {
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
+                        display: inline-block;
+                    }
+                </style>
+                <div class="span2">
+                    <span class="glyphicon glyphicon-random">
+                        <a href="#"><i class="fa fa-facebook tamanhoiconsocial faceb colorSocial" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter tamanhoiconsocial twitter colorSocial" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube tamanhoiconsocial youtube colorSocial" aria-hidden="true"></i></a>
+                    </span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="span3 col">
+                    <div class="block">
+                        <asp:Button ID="btnModerarProdutos" runat="server" Text="Moderar Produtos" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/ADM/ModerarProdutos.aspx"></asp:Button>
+                        <asp:Button ID="btnMoModerarUsuarios" runat="server" Text="Moderar Usuários" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/ADM/ModerarUsuarios.aspx"></asp:Button>
+                        <asp:Button ID="btnVerificarDenuncias" runat="server" Text="Verificar denuncias" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/ADM/VerificarDenunncias.aspx#"></asp:Button>
+                        <asp:Button ID="Button1" runat="server" Text="Alterar e excluir Estilos" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/ADM/ExcluirAtualizarDeletarEstilos.aspx#"></asp:Button>
+                        <asp:Button ID="btnModerarMarcas" runat="server" Text="Moderar Marcas" CssClass="i2Style i2Style:active"></asp:Button>
+                        <asp:Button ID="btnGerarRelatorios" runat="server" Text="Gerar relatórios" CssClass="i2Style i2Style:active"></asp:Button>
+
+                        <div class="block">
+                            <a href="/Paginas/ADM/CadastrarEstilo.aspx">Cadastrar estilos</a><br />
+                            <a href="/Paginas/ADM/CadastrarCategoria.aspx">Cadastrar Categorias</a><br />
+                            <a href="/Paginas/ADM/CadastrarSubcategoria.aspx">Cadastrar Subcategorias</a><br />
+                        </div>
+                        
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

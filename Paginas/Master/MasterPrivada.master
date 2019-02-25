@@ -1,0 +1,280 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPrivada.master.cs" Inherits="Paginas_Master_MasterPincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Garimpo</title>
+    <%--  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />--%>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!-- bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../../themes/css/bootstrappage.css" rel="stylesheet" />
+
+    <%-- <link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />--%>
+    <link href="../../bootstrap/css/EstiloProduto.css" rel="stylesheet" />
+    <link href="../../bootstrap/css/EstiloCadastroProduto.css" rel="stylesheet" />
+
+    <!-- Styles globals -->
+    <link href="../../themes/css/main.css" rel="stylesheet" />
+    <link href="../../themes/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="../../themes/css/flexslider.css" rel="stylesheet" />
+
+    <!-- scripts -->
+    <script src="../../themes/js/jquery-1.7.2.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../themes/js/superfish.js"></script>
+    <script src="../../themes/js/jquery.scrolltotop.js"></script>
+    <script src="../../themes/js/jquery.fancybox.js"></script>
+    <%--    <script src="../../themes/js/jquery-ui.js"></script>--%>
+
+    <script src="../../themes/js/jquery.mockjax.js"></script>
+    <script src="../../themes/js/jquery.form.js"></script>
+    <script src="../../themes/js/jquery.validate.min.js"></script>
+    <script src="../../themes/js/jquery.mask.min.js"></script>
+    <script src="../../themes/js/jquery.maskMoney.js"></script>
+    <script src="../../bootstrap/js/sweetalert.min.js"></script>
+
+    <%--CARRINHO--%>
+    <script src="../CarrinhoJS/jquery.cookie.js"></script>
+    <link href="../CarrinhoJS/estiloADDCarrinho.css" rel="stylesheet" />
+    <script src="../CarrinhoJS/ADDCarrinho.js"></script>
+
+    <%--  [if lt IE 9]>			
+			            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			            <script src="js/respond.min.js"></script>
+		            <![endif]--%>
+
+
+    <%--########################################################################################--%>
+    <%--SOCIAL--%>
+    <link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="themes/css/Icones.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+
+    <link href="../../themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="../../themes/css/Icones.css" rel="stylesheet" />
+    <link href="../../themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+    <%--########################################################################################--%>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .iconemenu, .tamanhoiconsocial {
+            font-size: 30px !important;
+        }
+
+        ul li {
+            padding-bottom: 1px !important;
+        }
+
+        .btn-large {
+            margin-bottom: 15px !important;
+        }
+
+        ul li a :focus {
+            background-color: blue !important;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <%-------- FAIXA DO TOPO -------%>
+        <div id="top-bar" class="container">
+            <div class="row ">
+
+                <!-- LOGO -->
+                <div class="span3">
+                    <div class="span3">
+                        <a href="/Paginas/Index.aspx" class="logo pull-left ">
+                            <img src="../../themes/images/Logo/paint-iloveimg-resized.png" class="site_logo" alt="" /></a>
+                    </div>
+                </div>
+                <!-- BARRA PESQUISA -->
+                <div class="span4">
+                    <br />
+                    <asp:TextBox ID="txtBuscar" class="form-control procurar" autocomplete="on" placeholder="pesquise por roupas e acessórios" runat="server">
+                    </asp:TextBox>
+                </div>
+                <!-- ICONES DE ACESSO -->
+                <div class="span5">
+                    <br />
+                    <div class="span6 ajuste-icones">
+                        <div class="account pull-center">
+                            <ul class="user-menu meumenu ajuste">
+                                <asp:Literal ID="ltlCarrinho" runat="server"></asp:Literal>
+                                <%-- <li><a href="/Paginas/Carrinho.aspx" class="cart iconemenu"><span></span></a></li>--%>
+                                <asp:Label ID="lblMensagens" runat="server" Visible="false"></asp:Label>
+                                <asp:Button ID="btnLogar" runat="server" Text="Entrar" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/Login.aspx" />
+
+                                <asp:Label ID="foto" runat="server" Visible="false">
+                                    <li><a class="meumenu">
+                                        <%-- <asp:Image ID="img" runat="server" Visible="false" class="user meumenu" />   --%>
+                                        <%--  <img src="../../themes/images/FOTO PERFIL/este.gif" class="user meumenu" />--%>
+                                        <asp:Label ID="lblFoto" runat="server"></asp:Label>
+                                    </a>
+                                        <ul id="lista-">
+                                            <li><a href="/Paginas/Alterar/AlterarCadastro.aspx">
+                                                <asp:Label ID="lblNome" runat="server"></asp:Label></a></li>
+                                            <li><a href="/Paginas/Usuário/MeusPedidos.aspx">Pedidos</a></li>
+                                            <li><a href="/Paginas/Usuário/ProdutosVenda.aspx" class="sep">Produtos a Venda</a></li>
+                                            <li><a href="/Paginas/Usuário/Favoritos.aspx">Favoritos</a></li>
+                                            <li><a href="/Paginas/Alterar/AlterarCadastro.aspx#" class="">Configurações</a></li>
+
+                                        </ul>
+                                    </li>
+                                </asp:Label>
+                                <asp:Button ID="btnVender" runat="server" Text="Vender" CausesValidation="false" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/Produtos/CadastroProdutoNovo.aspx" />
+                                <asp:Button ID="btnSair" runat="server" CssClass="i2Style i2Style:active ajuste" CausesValidation="false" Text="Sair" OnClick="btnSair_Click1" Visible="false" />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%------ CATEGORIAS -------%>
+        <div id="wrapper" class="container">
+
+            <section class="navbar main-menu ">
+                <div class="navbar-inner main-menu">
+                    <nav id="menu" class="pull-right pull-left " style="margin-left: 25%">
+                        <ul>
+                            <asp:Literal runat="server" ID="lblMenus"></asp:Literal>
+                            <%--<li><a href="./products.html">Rock</a>
+                                <ul>
+                                    <li><a href="./products.html">teste</a>
+                                        <ul style="margin-left:23%">
+                                            <li ><a href="#">Olá</a></li>                                          
+                                        </ul>
+                                    </li>                               
+                                </ul>
+                            </li>--%>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <%--  <section class="navbar main-menu ">
+                <div class="navbar-inner main-menu">
+                    <nav id="menu" class="pull-right pull-left" style="margin-left: 25%">                        
+                         <ul>
+                             <asp:Literal ID="ltlMenu" runat="server"></asp:Literal>
+                        </ul>
+                    </nav>
+                </div>
+            </section>--%>
+
+
+            <%--CONTEUDO CENTRAL--%>
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+    </form>
+
+
+    <%--################################################################################################--%>
+
+    <%------   IMAGENS DAS MARCAS  --------%>
+    <section class="our_client">
+        <h4 class="title"><span class="text">Marcas</span></h4>
+        <div class="row">
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/14.png" /></a>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/35.png" /></a>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/1.png" /></a>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/2.png" /></a>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/3.png" /></a>
+            </div>
+            <div class="span2">
+                <a href="#">
+                    <img alt="" src="../../themes/images/clients/4.png" /></a>
+            </div>
+        </div>
+    </section>
+
+    <%--#############################################--%>
+    <%--#############################################--%>
+
+    <%---------- Início rodapé --------%>
+    <section id="footer-bar">
+        <div class="row">
+            <div class="span3">
+                <h4>Ajuda</h4>
+                <ul class="nav">
+                    <li><a href="#">Termos de uso gerais</a></li>
+                    <li><a href="#">Termos de venda</a></li>
+                    <li><a href="#">Termos de compra</a></li>
+                </ul>
+            </div>
+            <div class="span3">
+                <h4>Mapa do site</h4>
+                <ul class="nav">
+                </ul>
+            </div>
+            <div class="span3">
+                <h4>Compra Segura</h4>
+            </div>
+
+            <div class="span2">
+                <h4>Garimpo Social</h4>
+                <span class="glyphicon glyphicon-random">
+                    <a href="//www.facebook.com"><i class="fa fa-facebook tamanhoiconsocial faceb" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter tamanhoiconsocial twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube tamanhoiconsocial youtube" aria-hidden="true"></i></a>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <%--#############################################--%>
+    <%--#############################################--%>
+    <section class="header_text">
+        <address>
+            <strong>Garimpo CNPJ: xxxx-xxxx</strong>
+            <a href="//www.google.com/gmail">garimpowebshop@gmail.com</a>
+        </address>
+    </section>
+
+    <script src="../../themes/js/common.js"></script>
+    <script src="../../themes/js/jquery.flexslider-min.js"></script>
+    <script src="../favoritar.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

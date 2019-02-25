@@ -1,0 +1,19 @@
+﻿
+Documentação
+cadastroCompleto (1=completou cadastro rapido / 2=completou dados / 3 = completou endereço)
+tipo de mensagem (1 = equipe garimpo , 2= pergunta sobre produto, 3 = respost sobre produto, 4 = Produto atualizado, 5 = produto aprovado)
+Pro_moderacao_status // 0 = em andamento / 1=aceito / 2=não aceito
+
+denunciar foto irregular = 1
+denunciar descrição irregular = 2
+denunciar produto em categoria errada = 3
+
+denuncia_tipo 1 = produto
+denuncia_tipo 2 = comentário
+
+item
+status = 0 // em andamento
+statuts = 1 //pagamento aprovado
+status = 2 // a caminho
+status = 3 // produto entregue
+status = 4 // pagamento reprovado

@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPerfil.master.cs" Inherits="Paginas_Master_MasterPerfil" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Garimpo</title>
+    <%--  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />--%>
+   
+    <!-- bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../../themes/css/bootstrappage.css" rel="stylesheet" />
+
+    <!-- Styles globals -->
+    <link href="../../themes/css/flexslider.css" rel="stylesheet" />
+    <link href="../../themes/css/main.css" rel="stylesheet" />
+
+    <!-- scripts -->
+    <script src="../../themes/js/jquery-1.7.2.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../themes/js/superfish.js"></script>
+    <script src="../../themes/js/jquery.scrolltotop.js"></script>
+    <%--<link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />--%>
+    <script src="../../themes/js/jquery.mask.min.js"></script>
+   <%-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>--%>
+    <script src="../../bootstrap/js/sweetalert.min.js"></script>
+
+
+     <%--CARRINHO--%>
+    <script src="../CarrinhoJS/jquery.cookie.js"></script>
+    <link href="../CarrinhoJS/estiloADDCarrinho.css" rel="stylesheet" />
+    <script src="../CarrinhoJS/ADDCarrinho.js"></script>
+    <%--  [if lt IE 9]>			
+			            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			            <script src="js/respond.min.js"></script>
+		            <![endif]--%>
+
+
+    <%--########################################################################################--%>
+    <%--SOCIAL--%>
+
+    <link href="../../bootstrap/css/meusEstilos.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="themes/css/Icones.css" rel="stylesheet" />
+    <link href="themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+
+    <link href="../../themes/css/fontawesome-4.5.0.min.css" rel="stylesheet" />
+    <link href="../../themes/css/Icones.css" rel="stylesheet" />
+    <link href="../../themes/css/fontawesome-4.7.0.min.css" rel="stylesheet" />
+    <%--########################################################################################--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .iconemenu, .tamanhoiconsocial {
+            font-size: 30px;
+        }
+
+        ul li {
+            padding-bottom: 1px !important;
+        }
+
+        .btn-large {
+            margin-bottom: 15px !important;
+        }
+
+        .fotoPerfilGrande {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 100% !important;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="top-bar" class="container">
+            <div class="row ">
+
+                <!-- LOGO -->
+                <div class="span3">
+                    <div class="span3">
+                        <a href="/Paginas/Index.aspx" class="logo pull-left ">
+                            <img src="../../themes/images/Logo/paint-iloveimg-resized.png" class="site_logo" alt="" /></a>
+                    </div>
+                </div>
+
+
+                <!-- BARRA PESQUISA -->
+                <div class="span4">
+                    <br />
+                    <asp:TextBox ID="txtBuscar" class="form-control procurar" autocomplete="on" placeholder="pesquise por roupas e acessórios" runat="server">
+                    </asp:TextBox>
+                </div>
+                <!-- ICONES DE ACESSO -->
+                <div class="span5">
+                    <br />
+                    <div class="span6">
+                        <div class="account pull-center">
+                            <ul class="user-menu meumenu">
+                                <%--<li><a href="/Paginas/Carrinho.aspx"><i class="fa fa-shopping-cart iconemenu"></i></a></li>--%>
+                                <asp:Literal ID="ltlCarrinho" runat="server"></asp:Literal>
+                                <asp:Label ID="lblMensagens" runat="server"></asp:Label>
+
+                                <asp:Label ID="foto" runat="server" Visible="false">
+                                    <li><a class="meumenu">
+                                        <asp:Label ID="lblFoto" runat="server"></asp:Label>
+                                        <%--<asp:Image ID="img" class="user meumenu" runat="server" />--%>
+                                        <%--<img src="../../themes/images/FOTO PERFIL/este.gif" class="user meumenu" />--%></a>
+                                        <ul>
+                                            <li><a href="/Paginas/Usuário/MeusPedidos.aspx">Compras</a></li>
+                                            <li><a href="/Paginas/Usuário/ProdutosVenda.aspx" class="sep">Vendas</a></li>
+                                            <li><a href="/Paginas/Usuário/Favoritos.aspx">Favoritos</a></li>
+                                            <li><a href="/Paginas/Alterar/AlterarCadastro.aspx#" class="">Configurações</a></li>
+                                            <%-- <li><asp:Button ID="btnSair" runat="server" Text="Sair" CssClass="btn-link" OnClick="btnSair_Click" PostBackUrl="/Paginas/Index.aspx" /></li>--%>
+                                        </ul>
+                                    </li>
+                                </asp:Label>
+                                <asp:Button ID="btnVender" runat="server" Text="Vender" CssClass="i2Style i2Style:active" PostBackUrl="/Paginas/Produtos/CadastroProdutoNovo.aspx" />
+                                <asp:Button ID="btnSair" runat="server" Text="Sair" CausesValidation="false" CssClass="i2Style i2Style:active ajuste" OnClick="btnSair_Click" />
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--Menu Principal--%>
+        <div id="wrapper" class="container">
+            <%-- <section class="navbar main-menu ">
+                <div class="navbar-inner main-menu">
+                    <nav id="menu" class="pull-right pull-left " style="margin-left: 30%">                       
+                         <ul>
+                            <li><a href="./products.html">Woman</a>
+                                <ul >
+                                    <li><a href="./products.html">Lacinia nibh</a>
+                                        <ul>
+                                            <li><a href="./products.html">Lacinia nibh</a></li>
+                                            <li><a href="./products.html">Lacinia nibh</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./products.html">Eget molestie</a></li>
+                                    <li><a href="./products.html">Varius purus</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>--%>
+            <section class="navbar main-menu ">
+                <div class="navbar-inner main-menu">
+                    <nav id="menu" class="pull-right pull-left" style="margin-left: 25%">                        
+                         <ul>
+                             <asp:Literal ID="lblMenus" runat="server"></asp:Literal>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+
+            <br />
+
+            <div class="row">
+                <div class="span2 text-center">
+                    <asp:Image ID="imgGrande" class="fotoPerfilGrande" runat="server" />
+                </div>
+                <div class="span10 pull-left">
+                    <h4>
+                        <asp:Label ID="lblNome" runat="server" Text="Nome do usuário"></asp:Label>
+                    </h4>
+                </div>
+                <div class="span10 pull-left">
+                    <div class="span3 pull-left">
+                        <p>
+                            Cadastrado em:
+                            <asp:Label ID="lblCCadastro" runat="server"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="span3 pull-left">
+                        Total de compras:
+                        <asp:Label ID="lblTotalCompras" runat="server" Text="00"></asp:Label>
+                    </div>
+                    <div class="span3 pull-left">
+                        Total de vendas:
+                        <asp:Label ID="lblTotalVendas" runat="server" Text="00"></asp:Label>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <div class="row">
+                <div class="span3">
+                    <div class="block">
+                        <h4>Compras:</h4>
+                        <a href="/Paginas/Usuário/MeusPedidos.aspx" class="pull-left">- Meus pedidos</a><br />
+                        <a href="/Paginas/Usuário/HistoricoCompra.aspx" class="pull-left">- Histórico de compra</a><br />
+                    </div>
+                    <div class="block">
+                        <h4>Vendas:</h4>
+                        <a href="/Paginas/Usuário/ProdutosVenda.aspx" class="pull-left">- Produtos à venda</a><br />
+                        <a href="/Paginas/Usuário/ProdutosDesativados.aspx" class="pull-left">- Produtos desativados</a><br />
+                        <a href="/Paginas/Usuário/ProdutosPendentes.aspx" class="pull-left">- Produtos pendentes</a><br />
+                        <a href="/Paginas/Usuário/HistoricoVenda.aspx" class="pull-left">- Histórico de venda</a><br />
+                    </div>
+                    <div class="block">
+                        <a href="/Paginas/Usuário/Favoritos.aspx" style="text-decoration: underline">
+                            <h4>Favoritos <i class="fa fa-heart"></i></h4>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <asp:Button ID="btnAlterarCadastro" runat="server" CssClass="i2Style i2Style:active btn-block" Text="Aterar Cadastro" PostBackUrl="~/Paginas/Alterar/AlterarCadastro.aspx" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <section>
+                            <div>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+    </form>
+
+    <%---------- Início rodapé --------%>
+    <section id="footer-bar">
+        <div class="row">
+            <div class="span3">
+                <h4>Ajuda</h4>
+                <ul class="nav">
+                    <li><a href="#">Termos de uso gerais</a></li>
+                    <li><a href="#">Termos de venda</a></li>
+                    <li><a href="#">Termos de compra</a></li>
+                </ul>
+            </div>
+            <div class="span3">
+                <h4>Mapa do site</h4>
+                <ul class="nav">
+                </ul>
+            </div>
+            <div class="span3">
+                <h4>Compra Segura</h4>
+            </div>
+
+            <div class="span2">
+                <h4>Garimpo Social</h4>
+                <span class="glyphicon glyphicon-random">
+                    <a href="#"><i class="fa fa-facebook tamanhoiconsocial faceb " aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter tamanhoiconsocial twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube tamanhoiconsocial youtube" aria-hidden="true"></i></a>
+                </span>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+    
+    <script src="../../themes/js/common.js"></script>
+    <script src="../../themes/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

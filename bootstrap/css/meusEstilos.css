@@ -1,0 +1,536 @@
+﻿.meumenu {
+    list-style: none;
+    z-index: 289 !important;
+    //border: 1px solid #c0c0c0;
+    //float: left;
+}
+
+    .meumenu li {
+        position: relative;
+        //float: left;
+        // border-right: 1px solid #c0c0c0;
+        z-index: 289 !important;
+    }
+
+        .meumenu li a {
+            //color: #333;
+            text-decoration: none;
+            //padding: 2px;
+            display: block;
+            z-index: 289 !important;
+        }
+
+            .meumenu li a:hover {
+                //background: #333;
+                //color: #fff;
+                //-moz-box-shadow: 0 3px 10px 0 #CCC;
+                // -webkit-box-shadow: 0 3px 10px 0 #ccc;
+                //text-shadow: 0px 0px 5px #fff;
+                z-index: 289 !important;
+            }
+
+        .meumenu li ul {
+            position: absolute;
+            top: 49px !important;
+            left: -72px;
+            background-color: #fff;
+            display: none;
+            z-index: 289 !important;
+        }
+
+        .meumenu li:hover ul {
+            display: block;
+            //border-right: 1px solid #c0c0c0;
+            z-index: 289 !important;
+        }
+
+        .meumenu li ul li {
+            /*// border: 1px solid #c0c0c0;*/
+            display: block;
+            width: 150px;
+            z-index: 289 !important;
+        }
+
+            .meumenu li ul li .sep {
+                border-bottom: 1px solid #c0c0c0;
+            }
+
+.tamanhoiconsocial {
+    font-size: 30px !important;
+}
+
+.faceb:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #3b5998;
+}
+
+.youtube:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #635ac8;
+}
+
+.twitter:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #55acee;
+}
+
+.user {
+    margin-bottom: 15px !important;
+    display: inline-block;
+    width: 47px !important;
+    height: 47px !important;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.btn-large {
+    margin-bottom: 15px !important;
+}
+
+.textbox {
+    border-radius: 3px !important;
+}
+
+
+.botao {
+    height: 35px;
+    border-radius: 7px;
+    margin-bottom: 15px !important;
+}
+
+    .botao:active {
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+    }
+
+
+
+    .botao:hover, .cartao:hover {
+        background-color: #3b5998;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.3s linear;
+        //box-shadow: 0px 0px 5px #ccc;
+        //border-radius: 8px;
+        color: white;
+    }
+
+
+.procurar {
+    width: 100%;
+    height: 30px !important;
+}
+
+
+
+.faceb:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #3b5998;
+}
+
+.youtube:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #ff0000;
+}
+
+.twitter:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+    color: #55acee;
+}
+
+
+.fotoPerfilGrande {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100% !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.margem {
+    margin-left: 5% !important;
+}
+
+.minha-bar {
+    color: #635ac8;
+}
+
+.texto-centralizado {
+    margin-left: 150px;
+}
+
+.botao-centralizado {
+    margin-left: 800px;
+}
+
+.botao-cadastrar {
+    margin-left: 180px;
+}
+
+.centralizar-env-pag {
+    margin-left: 160px;
+}
+
+.segundo:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #3b5998;
+}
+
+.descricao {
+    color: #333b80;
+    font-size: 22px;
+    text-transform: lowercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.centralizar-produto {
+    margin-left: 5%;
+}
+
+.fonte-estilo {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hr-cor {
+    color: #f00;
+    background-color: #627fbb;
+    height: 2px;
+}
+
+.roxo {
+    font-size: 26px;
+    color: #b04f91;
+    font-weight: bold;
+}
+
+.preço {
+    font-size: 23px;
+    color: #d414b3;
+    font-weight: bold;
+}
+
+.comprar {
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.titulo-produto {
+    color: #2c275c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rep-ven {
+    font-size: 18px;
+}
+
+.frete {
+    margin-left: 185px;
+}
+
+.i2Style {
+    font-size: 19px;
+    color: #ffffff;
+    background: #b04f91;
+    border: 0px solid #ffffff;
+    text-shadow: 0px 1px 1px #808080;
+    box-shadow: 2px 2px 2px #808080;
+    -moz-box-shadow: 2px 2px 2px #808080;
+    -webkit-box-shadow: 2px 2px 2px #808080;
+    border-radius: 2px;
+    width: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+
+    .i2Style:active {
+        cursor: pointer;
+        position: relative;
+        top: 6px;
+    }
+
+.ajuste {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.obrigatorio {
+    color: red;
+}
+
+.containerNOVO {
+    border-bottom: 2px solid #f3f1f1;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    align-content: center;
+}
+
+.darker {
+    border-color: #f7f7f7;
+    border-bottom: 2px solid #f3f1f1;
+    background-color: #f3f1f1;
+}
+
+.containerNOVO::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.containerNOVO img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+    .containerNOVO img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+a.mensagem {
+    width: 37px;
+    height: 37px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 36px;
+    font-size: 18px;
+    text-align: center;
+    color: #ce1616;
+    text-decoration: none;
+    /*position: absolute;*/
+    /*right: 24px;
+    top: 36px;*/
+    display: block;
+    background: url(../../themes/icones/inbox.png) center no-repeat;
+    background-size: 35px;
+    box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+    -moz-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(97, 97, 97 0.16), 0 3px 6px rgba(97, 97, 97 0.23);
+}
+
+    a.mensagem > span {
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 24px;
+        position: absolute;
+        -moz-border-radius: 12px;
+        -webkit-border-radius: 12px;
+        border-radius: 12px;
+        display: block;
+        transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        -moz-transform: scale(0);
+        -webkit-transform: scale(0);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #784f92;
+        box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+        -moz-box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+        -webkit-box-shadow: 0 3px 6px rgba(255, 171, 0, 0.16), 0 3px 6px rgba(255, 171, 0, 0.23);
+    }
+
+        a.mensagem > span.counter {
+            left: -40px;
+            bottom: -40px;
+            -webkit-transition: .2s linear;
+            -moz-transition: .2s linear;
+            -ms-transition: .2s linear;
+            -o-transition: .2s linear;
+            transition: .2s linear;
+            transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+            -moz-transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
+    .ribbon span {
+        font-size: 18px;
+        height: 35px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 35px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #79A70A;
+        background: linear-gradient(#843bb1 0%, #843bb1 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px;
+        right: -21px;
+    }
+
+        .ribbon span::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid #843bb1;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #843bb1;
+        }
+
+        .ribbon span::after {
+            content: "";
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            border-left: 3px solid transparent;
+            border-right: 3px solid #843bb1;
+            border-bottom: 3px solid transparent;
+            border-top: 3px solid #843bb1;
+        }
+
+.iconefavoritar:hover {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 1.0s linear;
+    font-size: 17px;
+}
+
+.coracaovazio {
+    color: #ecd0f1 !important;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 1.0s linear;
+}
+
+.coracaocheio {
+    color: rebeccapurple !important;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 1.0s linear;
+}
+
+
+a.botaoPadrao {
+    font-size: 19px;
+    color: #ffffff;
+    background: #b04f91;
+    border: 0px solid #ffffff;
+    text-shadow: 0px 1px 1px #808080;
+    box-shadow: 2px 2px 2px #808080;
+    -moz-box-shadow: 2px 2px 2px #808080;
+    -webkit-box-shadow: 2px 2px 2px #808080;
+    border-radius: 2px;
+    width: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    cursor: pointer;
+    margin-left: 45% !important;
+   
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    
+}
+a.botaoPadraoPERFIL {
+    font-size: 16px;
+    color: #ffffff;
+    background: #b04f91;
+    border: 0px solid #ffffff;
+    text-shadow: 0px 1px 1px #808080;
+    box-shadow: 2px 2px 2px #808080;
+    -moz-box-shadow: 2px 2px 2px #808080;
+    -webkit-box-shadow: 2px 2px 2px #808080;
+    border-radius: 2px;
+    width: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    /*margin-left: 45% !important;*/
+    color: rgb(255, 255, 255);
+}

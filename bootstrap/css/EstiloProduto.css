@@ -1,0 +1,161 @@
+﻿#secao {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#first {
+    margin-top: 25px;
+    text-align: center;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 100px;
+}
+
+#img {
+    height: 70px;
+    width: 60px;
+    border: 1px solid black;
+}
+
+#second {
+    margin-top: 25px;
+    text-align: center;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 100px;
+}
+
+#third {
+    margin-top: 25px;
+    text-align: center;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 100px;
+}
+
+#fourth {
+    margin-top: 25px;
+    text-align: center;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    min-height: 100px;
+}
+
+#divprinc {
+    min-height: 400px;
+    width: 100%;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+}
+
+#primeiro {
+    text-align: right;
+    min-height: 400px;
+    float: left;
+    margin-right:0px;
+    padding-right:0px;
+}
+
+#img1 {
+    height: 300px;
+    width: 232px;
+    border: 1px solid black;
+    text-align: right;
+}
+
+#segundo {
+    min-height: 400px;
+    margin-left: 0px;
+    padding-left: 0px;
+    float: left;
+    text-align: center;
+}
+
+
+#img2 {
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 90px;
+    width: 80px;
+}
+
+#img3 {
+    border: 1px solid black;
+    height: 90px;
+    width: 80px;
+}
+
+#img4 {
+    border: 1px solid black;
+    height: 90px;
+    width: 80px;
+}
+
+#terceiro {
+    min-height: 400px;
+    text-align: left;
+    margin-left: 0px;
+    padding-left: 0px;
+    float: left;
+}
+
+.marg {
+    margin-right: 15px;
+}
+
+#divperg {
+    text-align: center;
+}
+
+#perg {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#perg a:active{
+   font-family: 'Agency FB';
+   font-size: 50px;
+   color: purple;
+}
+
+
+
+
+.centralizar {
+    margin-left: 10%;
+}
+
+.input {
+    margin-left: 80px;
+}
+
+.categoria {
+    margin-left: 40%;
+}
+
+.texto {
+    margin-left: 20px;
+    color: #b04f91;
+    text-transform: uppercase;
+}
+
+.botao-publicar {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 19px;
+    margin-left: 60%;
+}
+
+.ajuste-cat {
+    margin-left: 20%;
+}
+
+.ajust-tem {
+    margin-left: 23%;
+}
